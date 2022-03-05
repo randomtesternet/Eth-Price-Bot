@@ -12,7 +12,7 @@ export default function Home() {
   const [price, setPrice] = useState("...");
 
   async function getPrice() {
-    const raw = await fetch("https://api.coinbase.com/v2/prices/eth-usd/spot");
+    const raw = await fetch("https://api.coinbase.com/v2/prices/strong-usd/spot");
     const { data } = await raw.json();
     setPrice(data.amount);
   }
